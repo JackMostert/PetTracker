@@ -15,9 +15,15 @@ export default class Master extends React.Component<rootPageTypes> {
         <Drawer.Navigator
           initialRouteName={this.props.rootStore.routeStore.inital}
         >
-          <Drawer.Screen name="splash" component={SplashScreen} />
-          <Drawer.Screen name="home" component={SplashScreen} />
-          <Drawer.Screen name="login" component={SplashScreen} />
+          <Drawer.Screen name="splash">
+            {(props) => <SplashScreen {...props} />}
+          </Drawer.Screen>
+          <Drawer.Screen name="home">
+            {(props) => <SplashScreen {...props} />}
+          </Drawer.Screen>
+          <Drawer.Screen name="login">
+            {(props) => <SplashScreen {...props} />}
+          </Drawer.Screen>
         </Drawer.Navigator>
       </NavigationContainer>
     );

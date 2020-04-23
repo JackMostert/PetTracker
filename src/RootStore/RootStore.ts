@@ -1,70 +1,30 @@
 import { observable, action } from "mobx";
+import LogicStore, { ILogicStore } from "./LogicStore";
+import UIStore, { IUIStore } from "./UIStore";
+import RouteStore, { IRouteStore } from "./RouteStore";
 
-class RouteStore implements RouteStoreTypes {
-  constructor(rootStore) {
-    this.rootStore = rootStore;
+class RootStore implements IrootStore {
+  public logicStore = LogicStore;
+  public uiStore = UIStore;
+  public routeStore = RouteStore;
+
+  public get CurrentRoute() {
+    return this.routeStore.current;
   }
 
-  rootStore;
-
-  @observable
-  inital = "splash";
-
-  @observable
-  current;
-
-  @observable
-  visitedRoutes;
+  @action
+  public UpdateCurrentRoute = (route: string) => {
+    this.routeStore.current = route;
+  };
 }
 
-class LogicStore {
-  constructor(rootStore) {
-    this.rootStore = rootStore;
-  }
-
-  rootStore;
-}
-
-class UIStore {
-  constructor(rootStore) {
-    this.rootStore = rootStore;
-  }
-
-  rootStore;
-}
-
-class RootStore implements RootStoreTypes {
-  routeStore;
-  logicStore;
-  uiStore;
-
-  constructor() {
-    this.routeStore = new RouteStore(this);
-    this.logicStore = new LogicStore(this);
-    this.uiStore = new UIStore(this);
-  }
-}
-
-export interface RootStoreTypes {
-  routeStore: RouteStoreTypes;
-  logicStore: LogicStoreTypes;
-  uiStore: UIStoreTypes;
-}
-
-export interface RouteStoreTypes {
-  rootStore: RootStoreTypes;
-  inital: string;
-  current: string | undefined;
-  visitedRoutes: Array<string> | undefined;
-}
-
-export interface LogicStoreTypes {
-  rootStore: RootStoreTypes;
-}
-
-export interface UIStoreTypes {
-  rootStore: RootStoreTypes;
-}
-
-const rootStore: RootStoreTypes = new RootStore();
+const rootStore: IrootStore = new RootStore();
 export default rootStore;
+
+export interface IrootStore {
+  logicStore: ILogicStore;
+  uiStore: IUIStore;
+  routeStore: IRouteStore;
+  readonly CurrentRoute: string | undefined;
+  UpdateCurrentRoute: (route: string) => void;
+}
