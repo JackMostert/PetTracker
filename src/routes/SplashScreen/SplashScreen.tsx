@@ -15,11 +15,10 @@ export default class SplashScreen extends React.Component<routeTypes> {
         <Button
           title="Click to begin"
           onPress={() => {
-            this.props.navigation.navigate("home");
-            this.props.rootStore?.UpdateCurrentRoute("home");
+            this.props.navigation.navigate("/home");
+            this.props.rootStore?.UpdateCurrentRoute("/home");
           }}
         />
-        <Text>{this.props.rootStore?.CurrentRoute}</Text>
       </View>
     );
   }

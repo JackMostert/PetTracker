@@ -7,6 +7,6 @@ export interface rootPageTypes {
 
 export interface routeTypes {
   rootStore?: IrootStore;
-  route: RouteProp<Record<string, object | undefined>, "splash">;
+  route: RouteProp<Record<string, object | undefined>, string>;
   navigation: any;
 }

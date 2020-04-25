@@ -2,10 +2,10 @@ import { observable, action } from "mobx";
 
 class RouteStore implements IRouteStore {
   @observable
-  inital = "splash";
+  inital = "/splash";
 
   @observable
-  current = "splash";
+  current = "/splash";
 
   @observable
   visitedRoutes = [];

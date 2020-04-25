@@ -5,6 +5,7 @@ import { Text, View, Button } from "react-native";
 import { inject, observer } from "mobx-react";
 import SplashScreen from "./routes/SplashScreen/SplashScreen";
 import { rootPageTypes } from "./GlobalTypes";
+import HomeScreen from "./routes/HomeScreen/HomeScreen";
 const Drawer = createDrawerNavigator();
 
 @inject("rootStore")
@@ -15,13 +16,13 @@ export default class Master extends React.Component<rootPageTypes> {
         <Drawer.Navigator
           initialRouteName={this.props.rootStore.routeStore.inital}
         >
-          <Drawer.Screen name="splash">
+          <Drawer.Screen name="/splash">
             {(props) => <SplashScreen {...props} />}
           </Drawer.Screen>
-          <Drawer.Screen name="home">
-            {(props) => <SplashScreen {...props} />}
+          <Drawer.Screen name="/home">
+            {(props) => <HomeScreen {...props} />}
           </Drawer.Screen>
-          <Drawer.Screen name="login">
+          <Drawer.Screen name="/login">
             {(props) => <SplashScreen {...props} />}
           </Drawer.Screen>
         </Drawer.Navigator>
