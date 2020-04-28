@@ -2,10 +2,10 @@ import { observable, action } from "mobx";
 
 class RouteStore implements IRouteStore {
   @observable
-  inital = "/splash";
+  initial = "splash";
 
   @observable
-  current = "/splash";
+  current = "splash";
 
   @observable
   visitedRoutes = [];
@@ -15,7 +15,7 @@ const routeStore: IRouteStore = new RouteStore();
 export default routeStore;
 
 export interface IRouteStore {
-  inital: string;
+  initial: string;
   current: string | undefined;
   visitedRoutes: Array<string>;
 }
