@@ -6,11 +6,6 @@ const FooterStyles = StyleSheet.create({
     flexDirection: "row",
     backgroundColor: "#8E3A89",
     width: "100%",
-    paddingLeft: 15,
-    paddingRight: 15,
-    alignItems: "flex-start",
-    justifyContent: "space-between",
-    paddingTop: 20,
   },
 });
 

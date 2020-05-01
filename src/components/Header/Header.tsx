@@ -27,7 +27,7 @@ const Header: React.FunctionComponent<IHeaderProps> = (props) => {
         <FontAwesome
           name="bars"
           size={37}
-          color="#EEDBFE"
+          color="white"
           onPress={() => {
             //@ts-ignore
             navigation.openDrawer();
@@ -40,7 +40,7 @@ const Header: React.FunctionComponent<IHeaderProps> = (props) => {
       <FontAwesome
         name="user"
         size={37}
-        color="#EEDBFE"
+        color="white"
         onPress={() => {
           //@ts-ignore
           // navigation.openDrawer();

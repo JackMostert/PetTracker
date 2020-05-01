@@ -10,7 +10,7 @@ const PageStyles = StyleSheet.create({
     flex: 1,
   },
   footer: {
-    height: 60,
+    height: 80,
   },
 });
 
