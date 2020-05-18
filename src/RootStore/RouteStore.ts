@@ -9,6 +9,9 @@ class RouteStore implements IRouteStore {
 
   @observable
   visitedRoutes = [];
+
+  @observable
+  tabRoute: "user" | "pet" = "user";
 }
 
 const routeStore: IRouteStore = new RouteStore();
@@ -18,4 +21,5 @@ export interface IRouteStore {
   initial: string;
   current: string | undefined;
   visitedRoutes: Array<string>;
+  tabRoute: "user" | "pet";
 }

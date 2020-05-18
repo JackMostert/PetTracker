@@ -19,6 +19,8 @@ import {
   ContributionGraph,
   StackedBarChart,
 } from "react-native-chart-kit";
+import PetScreen from "../PetScreen/PetScreen";
+import UserScreen from "../UserScreen/UserScreen";
 
 @inject("rootStore")
 @observer
@@ -30,7 +32,11 @@ export default class HomeScreen extends React.Component<routeTypes> {
         footer={<Footer />}
       >
         <View style={{ flex: 1, width: "100%", alignItems: "center" }}>
-          <Text>Bezier Line Chart</Text>
+          {rootStore.routeStore.tabRoute === "pet" ? (
+            <PetScreen />
+          ) : (
+            <UserScreen />
+          )}
         </View>
       </Page>
     );

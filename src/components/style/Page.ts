@@ -8,6 +8,7 @@ const PageStyles = StyleSheet.create({
   header: { height: 100 },
   body: {
     flex: 1,
+    height: "100%",
   },
   footer: {
     height: 80,
