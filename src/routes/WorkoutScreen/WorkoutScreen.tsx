@@ -1,5 +1,5 @@
 import * as React from "react";
-import { View, Text, Dimensions, AsyncStorage } from "react-native";
+import { View, Text, AsyncStorage } from "react-native";
 import { Button } from "react-native-elements";
 import { inject, observer } from "mobx-react";
 import { routeTypes } from "../../GlobalTypes";
@@ -8,34 +8,9 @@ import Header from "../../components/Header/Header";
 import rootStore from "../../RootStore/RootStore";
 import { StepCount } from "../../components/StepCount/StepCount";
 import { observable, action } from "mobx";
-import {
-  LineChart,
-  BarChart,
-  PieChart,
-  ProgressChart,
-  ContributionGraph,
-  StackedBarChart,
-} from "react-native-chart-kit";
 
 // @ts-ignore
 import { ProgressCircle } from "react-native-svg-charts";
-
-const chartConfig = {
-  backgroundColor: "#e26a00",
-  backgroundGradientFrom: "#fb8c00",
-  backgroundGradientTo: "#ffa726",
-  decimalPlaces: 2, // optional, defaults to 2dp
-  color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
-  labelColor: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
-  style: {
-    borderRadius: 16,
-  },
-  propsForDots: {
-    r: "6",
-    strokeWidth: "2",
-    stroke: "#ffa726",
-  },
-};
 
 const data = {
   labels: ["January", "February", "March", "April", "May", "June"],

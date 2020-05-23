@@ -1,15 +1,7 @@
 import * as React from "react";
 import { View, Text, Image, Dimensions } from "react-native";
 import UserScreenStyles from "../styles/UserScreen";
-
-import {
-  LineChart,
-  BarChart,
-  PieChart,
-  ProgressChart,
-  ContributionGraph,
-  StackedBarChart,
-} from "react-native-chart-kit";
+import { LineChart, ProgressChart } from "react-native-chart-kit";
 
 const chartConfig = {
   backgroundColor: "#e26a00",
