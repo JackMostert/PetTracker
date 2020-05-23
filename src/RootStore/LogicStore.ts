@@ -1,32 +1,22 @@
 import { observable, action } from "mobx";
-import Storage from "react-native-storage";
-import AsyncStorage from "@react-native-community/async-storage";
+import * as SecureStore from "expo-secure-store";
 
 class LogicStore implements ILogicStore {
-  constructor() {
-    this.storage = new Storage({
-      size: 1000,
-      storageBackend: AsyncStorage,
-      defaultExpires: null,
-      enableCache: true,
-      sync: {},
-    });
-  }
+  constructor() {}
 
   private storage: any;
 
-  public saveToDataBase = (key: string, id: string, data: object) => {
-    this.storage.save({
-      key: key,
-      id: id,
-      data: data,
-    });
+  public saveToDataBase = (key: string, value: string) => {
+    SecureStore.setItemAsync(key, value);
   };
+
+  public getFromDataBase = (key: string) => SecureStore.getItemAsync(key);
 }
 
 const logicStore: ILogicStore = new LogicStore();
 export default logicStore;
 
 export interface ILogicStore {
-  saveToDataBase: (key: string, id: string, data: object) => void;
+  saveToDataBase: (key: string, value: string) => void;
+  getFromDataBase: (key: string) => Promise<any>;
 }

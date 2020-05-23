@@ -117,13 +117,22 @@ export default class WorkoutScreen extends React.Component<routeTypes> {
                   {this.stepCounter.stepCount}
                 </Text>
               </View>
-              <Button
-                buttonStyle={{}}
-                title="Stop Workout"
-                onPress={() => {
-                  this.onStopStep();
-                }}
-              />
+              <View style={{ paddingTop: 50 }}>
+                <Button
+                  buttonStyle={{
+                    backgroundColor: "#8E3A89",
+                    width: 100,
+                    height: 100,
+                    scaleX: 1.2,
+                    scaleY: 1.2,
+                    borderRadius: 300,
+                  }}
+                  title="Stop"
+                  onPress={() => {
+                    this.onStopStep();
+                  }}
+                />
+              </View>
             </>
           )}
         </View>

@@ -19,6 +19,7 @@
     "expo": "~37.0.3",
     "expo-linear-gradient": "~8.1.0",
     "expo-react-native-shadow": "^1.0.3",
+    "expo-secure-store": "~8.1.0",
     "expo-sensors": "~8.1.0",
     "firebase": "^7.14.5",
     "firebase-admin": "^8.12.1",

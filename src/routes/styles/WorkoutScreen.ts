@@ -5,8 +5,11 @@ const WorkoutScreenStyles = StyleSheet.create({
   root: { ...GlobalStyles.centerAll, flex: 1, width: "100%" },
   text: { ...GlobalStyles.fontHero, marginBottom: 40 },
   btnStart: {
-    height: 200,
-    width: 200,
+    backgroundColor: "#8E3A89",
+    width: 100,
+    height: 100,
+    scaleX: 1.5,
+    scaleY: 1.5,
     borderRadius: 300,
     fontSize: 24,
   },

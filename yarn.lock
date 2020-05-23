@@ -3273,6 +3273,11 @@ expo-react-native-shadow@^1.0.3:
   resolved "https://registry.yarnpkg.com/expo-react-native-shadow/-/expo-react-native-shadow-1.0.3.tgz#70e40b06ae13313e88275bb98e0d5c4d800a7315"
   integrity sha512-0CnsKAzfO9cMlztyijiR2tz+D2Jilxt/3Uq4ByhQoG8HckSZG8tE+IHO5axoRkDyaK/gUefwOMB1e4fVsUAt/w==
 
+expo-secure-store@~8.1.0:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/expo-secure-store/-/expo-secure-store-8.1.0.tgz#1dcc4705c5264c828592a83842b8be8bbfb5f77f"
+  integrity sha512-EjCx9M2nH7iW3eNOjXl0I7oPypI0es6OStZakimR2iD8riLZp9LYHTj+39Iuz2o1m3OKi+bpwr3cHL52DxcDnA==
+
 expo-sensors@~8.1.0:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/expo-sensors/-/expo-sensors-8.1.0.tgz#2b46cb80c7e18a9fab9a6aca4e99c558a93389e1"

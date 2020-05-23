@@ -4,9 +4,9 @@ import UserScreenStyles from "../styles/UserScreen";
 import { LineChart, ProgressChart } from "react-native-chart-kit";
 
 const chartConfig = {
-  backgroundColor: "#e26a00",
-  backgroundGradientFrom: "#fb8c00",
-  backgroundGradientTo: "#ffa726",
+  backgroundColor: "#8E3A89",
+  backgroundGradientFrom: "#8E3A89",
+  backgroundGradientTo: "#8E3A89",
   decimalPlaces: 2, // optional, defaults to 2dp
   color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
   labelColor: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
@@ -16,7 +16,7 @@ const chartConfig = {
   propsForDots: {
     r: "6",
     strokeWidth: "2",
-    stroke: "#ffa726",
+    stroke: "#8E3A89",
   },
 };
 
