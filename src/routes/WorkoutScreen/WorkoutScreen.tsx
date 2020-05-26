@@ -50,7 +50,9 @@ export default class WorkoutScreen extends React.Component<routeTypes> {
   @action
   private _retrieveData = async () => {
     try {
-      const value = await AsyncStorage.getItem("UID123");
+      const keys = await AsyncStorage.getAllKeys();
+      const value = await AsyncStorage.getItem(keys[keys.length - 1]);
+
       if (value !== null) {
         this.hist = parseFloat(value);
       }
@@ -61,7 +63,7 @@ export default class WorkoutScreen extends React.Component<routeTypes> {
 
   @action
   private onStopStep = () => {
-    AsyncStorage.setItem("UID123", `${this.stepCounter.stepCount}`);
+    AsyncStorage.setItem(`date-${Date.now()}`, `${this.stepCounter.stepCount}`);
 
     this.counting = false;
     this.stepCounter.unsubscribe();

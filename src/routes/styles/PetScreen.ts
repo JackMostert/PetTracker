@@ -22,6 +22,20 @@ const PetScreenStyles = StyleSheet.create({
     marginTop: 60,
     fontSize: 24,
   },
+  ball: {
+    width: 25,
+    height: 25,
+    backgroundColor: "#d4a5d1",
+    borderRadius: 25,
+    marginRight: 10,
+  },
+  ball2: {
+    width: 25,
+    height: 25,
+    backgroundColor: "#752a70",
+    borderRadius: 25,
+    marginRight: 10,
+  },
 });
 
 export default PetScreenStyles;

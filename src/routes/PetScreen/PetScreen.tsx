@@ -43,6 +43,114 @@ const PetScreen: React.FunctionComponent<IPetScreenProps> = (props) => {
         style={PetScreenStyles.img}
         source={require("../../Media/Snake.gif")}
       />
+      <View
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-between",
+          width: Dimensions.get("window").width - 40,
+          marginTop: 30,
+          marginBottom: 30,
+          backgroundColor: "#8E3A89",
+          padding: 20,
+          borderRadius: 20,
+        }}
+      >
+        <View style={{ display: "flex", alignItems: "center" }}>
+          <Text style={{ fontSize: 18, fontWeight: "100", color: "#f0ddef" }}>
+            Name
+          </Text>
+          <Text style={{ fontSize: 18, color: "#d4a5d1" }}>Bill</Text>
+        </View>
+        <View style={{ display: "flex", alignItems: "center" }}>
+          <Text style={{ fontSize: 18, fontWeight: "100", color: "#f0ddef" }}>
+            Age
+          </Text>
+          <Text style={{ fontSize: 18, color: "#d4a5d1" }}>6 Months</Text>
+        </View>
+        <View style={{ display: "flex", alignItems: "center" }}>
+          <Text style={{ fontSize: 18, fontWeight: "100", color: "#f0ddef" }}>
+            Level
+          </Text>
+          <Text style={{ fontSize: 18, color: "#d4a5d1" }}>3</Text>
+        </View>
+      </View>
+
+      <View
+        style={{
+          backgroundColor: "#8E3A89",
+          justifyContent: "center",
+          padding: 20,
+          borderRadius: 20,
+        }}
+      >
+        <View
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            flexDirection: "row",
+            marginBottom: 20,
+          }}
+        >
+          <Text style={{ fontSize: 18, color: "#f0ddef", fontWeight: "100" }}>
+            StepPoints:
+          </Text>
+          <Text style={{ fontSize: 18, marginLeft: 5, color: "#d4a5d1" }}>
+            3
+          </Text>
+        </View>
+        <View
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-between",
+            width: Dimensions.get("window").width - 80,
+          }}
+        >
+          <Text style={{ fontSize: 18, fontWeight: "100", color: "#f0ddef" }}>
+            Hunger:
+          </Text>
+          <Text
+            style={{
+              fontSize: 24,
+              marginLeft: 5,
+            }}
+          >
+            <View style={PetScreenStyles.ball}></View>
+            <View style={PetScreenStyles.ball}></View>
+            <View style={PetScreenStyles.ball}></View>
+            <View style={PetScreenStyles.ball}></View>
+            <View style={PetScreenStyles.ball2}></View>
+          </Text>
+        </View>
+        <View
+          style={{
+            display: "flex",
+            alignItems: "center",
+            flexDirection: "row",
+            justifyContent: "space-between",
+            marginTop: 30,
+            width: Dimensions.get("window").width - 80,
+          }}
+        >
+          <Text style={{ fontSize: 18, fontWeight: "100", color: "#f0ddef" }}>
+            Happiness:
+          </Text>
+          <Text
+            style={{
+              fontSize: 18,
+              marginLeft: 5,
+            }}
+          >
+            <View style={PetScreenStyles.ball}></View>
+            <View style={PetScreenStyles.ball}></View>
+            <View style={PetScreenStyles.ball2}></View>
+            <View style={PetScreenStyles.ball2}></View>
+            <View style={PetScreenStyles.ball2}></View>
+          </Text>
+        </View>
+      </View>
       <Text style={PetScreenStyles.text1}>Days You've fed your pet</Text>
       <ContributionGraph
         values={commitsData}
@@ -52,6 +160,7 @@ const PetScreen: React.FunctionComponent<IPetScreenProps> = (props) => {
         height={220}
         chartConfig={chartConfig}
       />
+      <View style={{ height: 20 }}></View>
     </View>
   );
 };
